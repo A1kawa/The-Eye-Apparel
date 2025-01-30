@@ -36,55 +36,6 @@ window.onload = async function () {
     await delay(500)
     logos.src = eye
     logos.style.left = "5%"
-
-    setInterval(async() => {
-        if (alternar) {
-            console.log("Fazendo a primeira coisa...")
-            const timeline = anime.timeline({
-                targets: '#logo',
-                duration: 500,
-                easing : "easeOutExpo"
-            })
-            timeline.add({
-                targets: '#logo',
-                duration: 500,
-                scale: 0,
-                easing : "easeOutExpo"
-            })
-            timeline.add({
-                targets: '#logo',
-                duration: 500,
-                scale: 1,
-                easing : "easeOutExpo"
-            })
-            await delay(500)
-            logos.src = eye
-            logos.style.left = "5%"
-        } else {
-            console.log("Fazendo a segunda coisa...");
-            const timeline = anime.timeline({
-                targets: '#logo',
-                duration: 500,
-                easing : "easeOutExpo"
-            })
-            timeline.add({
-                targets: '#logo',
-                scale: 0,
-                easing : "easeOutExpo"
-            })
-            timeline.add({
-                targets: '#logo',
-                scale: 1,
-                easing : "easeOutExpo",
-            })
-            await delay(500)
-            logos.src = prot
-            logos.style.left = "11%"
-        }
-        alternar = !alternar; // Inverte o estado para a próxima execução
-    },
-    10000,
-    )
 }
 
 
@@ -156,6 +107,14 @@ function ChangeRoll() {
     },
     "-=200"
     )
+    .add({
+        targets: "#intEye",
+        fill: [{value: scrollToggle ? "#E83232" : "rgb(255, 255, 255)"}],
+    })
+    .add({
+        targets: "#headForm",
+        fill: [{value: scrollToggle ? "rgb(255, 255, 255)" : "#E83232"}],
+    })
 }
 
 function getRoll() {
