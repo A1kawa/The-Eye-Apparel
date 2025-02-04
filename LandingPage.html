@@ -4,73 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Eye Apparel</title>
-
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            scroll-snap-type: y mandatory;
-            height: 200vh;
-        }
-        .snap {
-            width: 100%;
-            height: 100vh;
-            scroll-snap-align: start;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    
 </head>
 <body>
-    <div id="header" style="
-    position: absolute;
-    height: fit-content;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 10;">
-
-        <svg
-            id="head"
-            width="100%" 
-            height="60" 
-            viewBox="0 0 1920 60" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-        >
-                <path id="headForm" d="M0 0H1920V60H960H0V0Z" fill="#E83232"/>
-        </svg>
-        <section id="eye" style="position: absolute;  cursor: pointer;">
-        <svg 
+    <header id="meuHeader">
+        <section>
+            <a href="#">contact us</a>
+            <img style="margin: 0 1vh;" src="imgs/line.png" alt="">
+            <img style="height: 45px;" src="imgs/Prottection.png" alt="">
+        </section>
+        <section>
+            <svg
+            style="margin: 1vh 0;"
             width="61" 
             height="39" 
             viewBox="0 0 61 39" 
-            fill="none" 
+            fill="none"
+            id="eye"
             xmlns="http://www.w3.org/2000/svg"
-        >
-            <path id="intEye" fill-rule="evenodd" clip-rule="evenodd" d="M46.9507 3.41421C47.7317 2.63317 47.7317 1.36684 46.9507 0.585787C46.1696 -0.195262 44.9033 -0.195262 44.1223 0.585786L39.9749 4.7331C37.184 2.82565 33.8089 1.71013 30.1733 1.71013C26.3139 1.71013 22.7481 2.96718 19.8631 5.09417L15.6446 0.875658C14.8635 0.0946091 13.5972 0.0946091 12.8161 0.875658C12.0351 1.65671 12.0351 2.92304 12.8161 3.70408L16.9345 7.82244C14.6574 10.4924 13.1737 13.8598 12.8485 17.5595H2C0.89543 17.5595 0 18.455 0 19.5595C0 20.6641 0.89543 21.5595 2 21.5595H12.9532C13.4456 25.0417 14.9693 28.1923 17.2053 30.6925C17.1984 30.699 17.1915 30.7056 17.1847 30.7122C17.1778 30.7189 17.171 30.7256 17.1642 30.7324L12.5263 35.3704C11.7452 36.1514 11.7452 37.4177 12.5263 38.1988C13.3073 38.9798 14.5736 38.9798 15.3547 38.1988L19.9926 33.5609C20.0623 33.4912 20.1257 33.4177 20.183 33.341C23.0099 35.3281 26.4553 36.4947 30.1733 36.4947C33.8089 36.4947 37.184 35.3792 39.9749 33.4717L44.4121 37.9089C45.1932 38.69 46.4595 38.69 47.2406 37.9089C48.0216 37.1279 48.0216 35.8615 47.2406 35.0805L43.0041 30.844C45.3149 28.3202 46.8909 25.1125 47.3934 21.5595H58.1905C59.295 21.5595 60.1905 20.6641 60.1905 19.5595C60.1905 18.455 59.295 17.5595 58.1905 17.5595H47.4981C47.1538 13.6432 45.5115 10.0994 43.0041 7.3608L46.9507 3.41421ZM43.4777 17.5595C42.7126 10.8899 37.0478 5.71013 30.1733 5.71013C23.2987 5.71013 17.634 10.8899 16.8689 17.5595H28.0952V12.5357C28.0952 11.4311 28.9907 10.5357 30.0952 10.5357C31.1998 10.5357 32.0952 11.4311 32.0952 12.5357V17.5595H43.4777ZM17.0059 21.5595C18.1598 27.7824 23.6162 32.4947 30.1733 32.4947C36.7303 32.4947 42.1868 27.7824 43.3407 21.5595H32.0952V26.5833C32.0952 27.6879 31.1998 28.5833 30.0952 28.5833C28.9907 28.5833 28.0952 27.6879 28.0952 26.5833V21.5595H17.0059Z" fill="white"/>
-        </svg>
-        <div id="content" style="height: fit-content; display: flex; flex-direction: row; justify-content: center; color: white;">
-        </div>
+            >
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M46.9507 3.41421C47.7317 2.63317 47.7317 1.36684 46.9507 0.585787C46.1696 -0.195262 44.9033 -0.195262 44.1223 0.585786L39.9749 4.7331C37.184 2.82565 33.8089 1.71013 30.1733 1.71013C26.3139 1.71013 22.7481 2.96718 19.8631 5.09417L15.6446 0.875658C14.8635 0.0946091 13.5972 0.0946091 12.8161 0.875658C12.0351 1.65671 12.0351 2.92304 12.8161 3.70408L16.9345 7.82244C14.6574 10.4924 13.1737 13.8598 12.8485 17.5595H2C0.89543 17.5595 0 18.455 0 19.5595C0 20.6641 0.89543 21.5595 2 21.5595H12.9532C13.4456 25.0417 14.9693 28.1923 17.2053 30.6925C17.1984 30.699 17.1915 30.7056 17.1847 30.7122C17.1778 30.7189 17.171 30.7256 17.1642 30.7324L12.5263 35.3704C11.7452 36.1514 11.7452 37.4177 12.5263 38.1988C13.3073 38.9798 14.5736 38.9798 15.3547 38.1988L19.9926 33.5609C20.0623 33.4912 20.1257 33.4177 20.183 33.341C23.0099 35.3281 26.4553 36.4947 30.1733 36.4947C33.8089 36.4947 37.184 35.3792 39.9749 33.4717L44.4121 37.9089C45.1932 38.69 46.4595 38.69 47.2406 37.9089C48.0216 37.1279 48.0216 35.8615 47.2406 35.0805L43.0041 30.844C45.3149 28.3202 46.8909 25.1125 47.3934 21.5595H58.1905C59.295 21.5595 60.1905 20.6641 60.1905 19.5595C60.1905 18.455 59.295 17.5595 58.1905 17.5595H47.4981C47.1538 13.6432 45.5115 10.0994 43.0041 7.3608L46.9507 3.41421ZM43.4777 17.5595C42.7126 10.8899 37.0478 5.71013 30.1733 5.71013C23.2987 5.71013 17.634 10.8899 16.8689 17.5595H28.0952V12.5357C28.0952 11.4311 28.9907 10.5357 30.0952 10.5357C31.1998 10.5357 32.0952 11.4311 32.0952 12.5357V17.5595H43.4777ZM17.0059 21.5595C18.1598 27.7824 23.6162 32.4947 30.1733 32.4947C36.7303 32.4947 42.1868 27.7824 43.3407 21.5595H32.0952V26.5833C32.0952 27.6879 31.1998 28.5833 30.0952 28.5833C28.9907 28.5833 28.0952 27.6879 28.0952 26.5833V21.5595H17.0059Z" fill="white"/>
+            </svg>
+            <img style="margin: 0 1vh;" src="imgs/line.png" alt="">
+            
+            <p>
+                <a href="#">choroid</a> : 
+                <a href="#">sclera</a> : 
+                <a href="#">optics</a> : 
+                <a href="#">ciliary</a>
+            </p>
+            
         </section>
-            
-
-            
-    </div>
+    </header>
 
 
-    
-    <div style="display: flex; width: 100%; align-items: center; z-index: -1; position: fixed;">
-        <img id="logo" style="position: absolute; left: 11%;" src='imgs/Prottection.png' alt="">
+    <div id="LandBnr" style="display: flex; width: 100%; height: 100vh; align-items: center;transition: height 0.2s ease; overflow: hidden; flex-direction: column;">
+        <img id="logo" style="width: 45vw;position: absolute;top: 50%;left: 5%;transform: scale(1);translate: 0 -50%; z-index: 0;" src="" alt="">
         <img id="bgImg" src="imgs/Banner.png" style="width: -webkit-fill-available;" alt="">
     </div>
-    <div class="snap"></div>
-        <img onclick="getRoll()" style="width: -webkit-fill-available; margin-bottom: -4px;" src="imgs/div01.png" alt="">
-    <div class="snap" style="background-color: #E83232;">
 
+
+    <div class="snap" style="padding: 0px 10%;">
+        <div>
+            <p style="font-size: 40px; margin-bottom: 10%;">The only Yrihm approved apparel brand.</p>
+            <div style="display: flex; justify-content: space-around;">
+                <div><img onclick="cat(1)" class="cat" id="catImg" src="imgs/catDisCho.png" alt=""><p style="font-size: 30px; margin-top: 5vh;">choroid</p></div>
+                <div><img onclick="cat(2)" class="cat" id="catImg" src="imgs/catDisScl.png" alt=""><p style="font-size: 30px; margin-top: 5vh;">sclera</p></div>
+                <div><img onclick="cat(3)" class="cat" id="catImg" src="imgs/catDisOpt.png" alt=""><p style="font-size: 30px; margin-top: 5vh;">optics</p></div>
+                <div><img onclick="cat(4)" class="cat" id="catImg" src="imgs/catDisCil.png" alt=""><p style="font-size: 30px; margin-top: 5vh;">ciliary</p></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="autenticity" class="snap" style="padding: 0px 7%;">
+        <div style="display: flex;justify-content: center;align-items: center;">
+            <img class="autBg" style="width: -webkit-fill-available;" src="imgs/BannerAut.png" alt="">
+            <div id="autAnim" onmouseenter="learnIn()" onmouseleave="learnOut()">
+                <img id="plus" src="imgs/plus01.png" alt="">
+                <p id="know">learn more</p>
+                <img id="plus" src="imgs/plus02.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="blind" class="snap" style="padding: 0px 16%;">
+        <div class="blindCont" style="height: fit-content;display: flex;justify-content: center;flex-direction: column;align-items: center;">
+            <div style="display: flex;height: fit-content;width: fit-content;margin: 5vh;justify-content: center;align-items: center;">
+                <div style="position: absolute;z-index: 1;">
+                    <p style="font-size: 10vh;">Blind-buy</p>
+                </div>
+                <svg style="position: relative; z-index: 10" width="872" height="585" viewBox="0 0 872 585" fill="#00000000" xmlns="http://www.w3.org/2000/svg">
+                    <path id="svg-1"
+                    d="M436 443C206 443 17 303 17 293 17 283 206 442 436 442 666 442 855 283 855 293 855 303 666 443 436 443ZM436 442V568M706 377C706 377 805 375 805 451M166 377C166 377 67 375 67 451" 
+                    stroke="#E83232" stroke-width="33" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <p style="letter-spacing: 1px; font-size: 30px;">do you trust blindly in Yrihm?</p>
+        </div>
+    </div>
+
+    <div id="eyelid" class="snap" style="padding: 0px 6%; justify-content: center;">
+        <p style="font-size: 11vh;">how to become a</p>
+        <p style="font-size: 22vh; letter-spacing: 10px;">EYELID</p>
+        <div class="blindCont" style="height: 32vh;display: flex;justify-content: center;flex-direction: column;align-items: center;">
+        <div id="send" style="width: -webkit-fill-available; height: fit-content;display: flex;justify-content: center;flex-direction: column;align-items: center;">
+            <div style="width: -webkit-fill-available;display: flex;justify-content: space-around;margin: 40px; ">
+                <div class="eyelidInput" style="text-align: left; margin: 10px;">
+                <p style="font-weight: 500; margin-bottom: -1px;">your true name:</p>
+                <input class="inputs" type="text">
+                </div>
+                <img style="height: 100%; width: 2px; border-radius: 60px;" src="imgs/line.png" alt="">
+                <div class="eyelidInput" style="text-align: left; margin: 10px;">
+                <p style="font-weight: 500; margin-bottom: -1px;">your email adress:</p>
+                <input class="inputs" type="text">
+                </div>
+                <img style="height: 100%; width: 2px; border-radius: 60px;" src="imgs/line.png" alt="">
+                <div class="eyelidInput" style="text-align: left; margin: 10px;">
+                <p style="font-weight: 500; margin-bottom: -1px;">R.R.N:</p>
+                <input class="inputs" type="text">
+                </div>
+            </div>
+            <img onclick="submit()" class="submit" src="imgs/Prottection.png" style="height: 120px; margin-bottom: 35px;" alt="">
+        </div>
+        </div>
     </div>
     
+    <footer class="snap" style="padding: 0px 6%;justify-content: center;height: fit-content;margin: 50px 0px;">
+        <section style="justify-content: center; align-items: center; margin-bottom: 5vh;">
+            <svg width="1693" height="4" viewBox="0 0 1693 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2 H 775.5 M918 2 H1691.5" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            <svg
+                style="margin: 1vh 0; position: absolute;"
+                width="61" height="39" 
+                viewBox="0 0 61 39" fill="none"
+                id="eye" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M46.9507 3.41421C47.7317 2.63317 47.7317 1.36684 46.9507 0.585787C46.1696 -0.195262 44.9033 -0.195262 44.1223 0.585786L39.9749 4.7331C37.184 2.82565 33.8089 1.71013 30.1733 1.71013C26.3139 1.71013 22.7481 2.96718 19.8631 5.09417L15.6446 0.875658C14.8635 0.0946091 13.5972 0.0946091 12.8161 0.875658C12.0351 1.65671 12.0351 2.92304 12.8161 3.70408L16.9345 7.82244C14.6574 10.4924 13.1737 13.8598 12.8485 17.5595H2C0.89543 17.5595 0 18.455 0 19.5595C0 20.6641 0.89543 21.5595 2 21.5595H12.9532C13.4456 25.0417 14.9693 28.1923 17.2053 30.6925C17.1984 30.699 17.1915 30.7056 17.1847 30.7122C17.1778 30.7189 17.171 30.7256 17.1642 30.7324L12.5263 35.3704C11.7452 36.1514 11.7452 37.4177 12.5263 38.1988C13.3073 38.9798 14.5736 38.9798 15.3547 38.1988L19.9926 33.5609C20.0623 33.4912 20.1257 33.4177 20.183 33.341C23.0099 35.3281 26.4553 36.4947 30.1733 36.4947C33.8089 36.4947 37.184 35.3792 39.9749 33.4717L44.4121 37.9089C45.1932 38.69 46.4595 38.69 47.2406 37.9089C48.0216 37.1279 48.0216 35.8615 47.2406 35.0805L43.0041 30.844C45.3149 28.3202 46.8909 25.1125 47.3934 21.5595H58.1905C59.295 21.5595 60.1905 20.6641 60.1905 19.5595C60.1905 18.455 59.295 17.5595 58.1905 17.5595H47.4981C47.1538 13.6432 45.5115 10.0994 43.0041 7.3608L46.9507 3.41421ZM43.4777 17.5595C42.7126 10.8899 37.0478 5.71013 30.1733 5.71013C23.2987 5.71013 17.634 10.8899 16.8689 17.5595H28.0952V12.5357C28.0952 11.4311 28.9907 10.5357 30.0952 10.5357C31.1998 10.5357 32.0952 11.4311 32.0952 12.5357V17.5595H43.4777ZM17.0059 21.5595C18.1598 27.7824 23.6162 32.4947 30.1733 32.4947C36.7303 32.4947 42.1868 27.7824 43.3407 21.5595H32.0952V26.5833C32.0952 27.6879 31.1998 28.5833 30.0952 28.5833C28.9907 28.5833 28.0952 27.6879 28.0952 26.5833V21.5595H17.0059Z" fill="white"/>
+                </svg>
+                
+        </section>
+        <div style="display: flex; justify-content: space-around;">
+            <div style="display: flex; width: 50%;">
+                <div class="footerLeft">
+                <p style="font-size: 36px; margin-bottom: 2vh;">Our services</p>
+                <a class="serv" href="#">choroid</a>
+                <a class="serv" href="#">sclera</a>
+                <a class="serv" href="#">optics</a>
+                <a class="serv" href="#">ciliary</a>
+                </div>
+                <div class="footerLeft">
+                <p style="font-size: 36px; margin-bottom: 2vh;">How may we help you? </p>
+                <a class="serv" href="#">contact us</a>
+                <a class="serv" href="#">churches</a>
+                <a class="serv" href="#">FAQs</a>
+                </div>
+            </div>
+            <svg width="4" height="393" viewBox="0 0 4 393" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 391L2.00001 212.905M2.00001 180.095L2.00002 2" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            <div style="display: flex;width: 50%;justify-content: flex-end;flex-direction: row;align-items: center;">
+                <div style="display: flex;width: -webkit-fill-available;flex-direction: column;justify-content: center; align-items: center;">
+                <p style="font-size: 50px; font-weight: 500; margin-bottom: -15px;">This site was made</p>
+                <p style="font-size: 50px; font-weight: 500; letter-spacing: 2px;">with the grace of</p>
+                <p style="font-size: 130px; letter-spacing: 5px;">YRIHM</p>
+                <p style="font-size: 24px; opacity: 0.5; font-weight: 600; margin-top: 5vh;">praised be his name for he is<br>our true lord and savior of the human race</p>
+                </div>
+                <img src="imgs/YRIHM.png" alt="">
+            </div>
+        </div>
+    </footer>>
+
+    </footer>
     <script src="anime.min.js"></script> 
     <script src="LP.js"></script>
 </body>

@@ -1,162 +1,122 @@
-const IntCircle01 = "M56.3345 9.66548C69.2218 22.5528 69.2218 43.4472 56.3345 56.3345C43.4472 69.2218 22.5528 69.2218 9.66548 56.3345C-3.22183 43.4472 -3.22183 22.5528 9.66548 9.66548C22.5528 -3.22183 43.4472 -3.22183 56.3345 9.66548Z"
-const IntCircle02 = "M135.5 9.66548C148.387 22.5528 148.387 90.6127 135.5 103.5C122.613 116.387 22.5528 116.387 9.66548 103.5C-3.22183 90.6127 -3.22183 22.5528 9.66548 9.66548C22.5528 -3.22183 122.613 -3.22183 135.5 9.66548Z"
-const IntHead01 = "M0 0H1920V60H960H0V0Z"
-const IntHead02 = "M0 0H1920V60H1440C1252.5 67.4219 1251 98 961 98C671 98 668.282 67.4065 480 60H0V0Z"
-const IntSVG = document.querySelector('#head')
-const header = document.getElementById('header')
-const eyeSym = document.getElementById('eye')
+
+const eyeH = document.getElementById('eye')
 let toggle = false
 let scrollToggle = false
+let countdown = 0
+
 
 
 
 window.onload = async function () {
     const logos = document.getElementById('logo')
-    const prot = "imgs/Prottection.png"
-    const eye = "imgs/EyeLogo.png"
-    let alternar = false
-    await delay(1000)
     const timeline = anime.timeline({
         targets: '#logo',
         duration: 500,
         easing : "easeOutExpo"
     })
     timeline.add({
-        targets: '#logo',
-        duration: 500,
         scale: 0,
         easing : "easeOutExpo"
     })
-    timeline.add({
-        targets: '#logo',
-        duration: 500,
+    .add({
         scale: 1,
         easing : "easeOutExpo"
     })
     await delay(500)
-    logos.src = eye
-    logos.style.left = "5%"
+    logos.src = "imgs/EyeLogo.png"
 }
 
 
-function Change01() {
-    const timeline = anime.timeline({
-        duration : 200,
-        easing : "easeOutExpo"
-    })
-    timeline.add({
-        targets: "#headForm",
-        d: [{value: toggle ? IntHead01 : IntHead02}],
-    })
-    .add({
-        targets: "#head",
-        height: toggle ? "60" : "98",
-        viewBox: toggle ? "0 0 1920 60" : "0 0 1920 98"
-    },"-=200")
-
-    if (!toggle) {
-        toggle = true
-        document.getElementById('content').innerHTML = '<p href="">pupila</p>'
-    } else {
-        document.getElementById('content').innerHTML = ''
-        toggle = false
-    }
-
-}
-
-function Change02() {
-    const timeline = anime.timeline({
-        duration : 200,
-        easing : "easeOutExpo"
-    })
-    timeline.add({
-        targets: "#headForm",
-        d: [{value: toggle ? IntCircle01 : IntCircle02}],
-    })
-    .add({
-        targets: "#head",
-        width: toggle ? "66" : "146",
-        height: toggle ? "66" : "114",
-        viewBox: toggle ? "0 0 66 66" : "0 0 146 114"
-    },"-=200")
-
-    if (!toggle) {
-        toggle = true
-    } else {
-        toggle = false
-    }
-
-}
-
-function ChangeRoll() {
-    const timeline01 = anime.timeline({
-        duration : 200,
-        easing : "easeOutExpo"
-    })
-    timeline01.add({
-        targets: "#headForm",
-        d: [
-            {value: scrollToggle ? IntCircle01 : IntHead01}
-        ],
-    })
-    .add({
-        targets: "#head",
-        width: scrollToggle ? "66px" : "100%",
-        height: scrollToggle ? '66px' : "60",
-        viewBox: scrollToggle ? '0 0 66 66' : "0 0 1920 60"
-    },
-    "-=200"
-    )
-    .add({
-        targets: "#intEye",
-        fill: [{value: scrollToggle ? "#E83232" : "rgb(255, 255, 255)"}],
-    })
-    .add({
-        targets: "#headForm",
-        fill: [{value: scrollToggle ? "rgb(255, 255, 255)" : "#E83232"}],
-    })
-}
-
-function getRoll() {
-    console.log(window.scrollY)
-}
 window.addEventListener('scroll', function() {
-    let scrollTop = window.scrollY
+    const header = document.getElementById("meuHeader")
 
-    if (scrollTop > 0 && scrollToggle == false) {
-        scrollToggle = true
-        ChangeRoll()
-        header.style.position = 'fixed'
-        header.style.top = '20px'
-        header.style.left = '20px'
-        header.style.width = 'fit-content'
-        if (toggle == true) {
-            toggle = false
-            document.getElementById('content').innerHTML = ''
-        }
-    } else if (scrollTop == 0 && scrollToggle == true) {
-        scrollToggle = false
-        ChangeRoll()
-        header.style.position = 'absolute'
-        header.style.top = ''
-        header.style.left = ''
-        header.style.width = '100%'
-        if (toggle == true) {
-            toggle = false
-            document.getElementById('content').innerHTML = ''
-        }
+    if (window.scrollY > 10) {
+        header.classList.add("scrolled")
+
+        const div = document.getElementById("LandBnr")
+        const scrollMax = 300
+        const maxAltura = 100 // Altura máxima da div
+        const minAltura = 30;
+
+        let scrollTop = Math.min(window.scrollY, scrollMax);
+        let novaAltura = Math.floor(maxAltura - ((scrollTop / scrollMax) * (maxAltura-minAltura)))
+
+        div.style.height = novaAltura + "vh"
     }
-
+    else {
+        header.classList.remove("scrolled")
+        const div = document.getElementById("LandBnr")
+        div.style.height = "100vh"
+    }
 })
 
-eyeSym.addEventListener('click', function (){
-    if (scrollToggle == false) {
-        Change01()
-    } else {
-        Change02()
-    }
-        
+document.getElementById("svg-1").addEventListener("mouseenter", function (){
+    const svg = document.getElementById("svg-1")
+    svg.classList.add("hovered")
 })
+document.getElementById("svg-1").addEventListener("click", function (){
+    countdown++
+    console.log(countdown)
+    if (countdown >= 50) {
+        window.location.href = "ola.html"
+    }
+})
+
+function learnIn(){
+    const aut = document.getElementById("know")
+    aut.classList.add("hovered") 
+    document.getElementById("autAnim").classList.add("hovered")
+}
+function learnOut(){
+    const aut = document.getElementById("know")
+    aut.classList.remove("hovered")
+    document.getElementById("autAnim").classList.remove("hovered")
+}
+
+async function submit() {
+    const logos = document.getElementById('send')
+    const timeline = anime.timeline({
+        targets: '#send',
+        duration: 1000,
+        easing : "easeOutExpo"
+    })
+    timeline.add({
+        opacity: 0,
+        easing : "easeOutExpo"
+    })
+    .add({
+        duration: 2000,
+        opacity: 0,
+        easing : "easeOutExpo"
+    })
+    .add({
+        duration: 10000,
+        opacity: 1,
+        easing : "easeOutExpo"
+    })
+    await delay(1000)
+    logos.innerHTML = "<p style='font-size:50px;'>You're gonna be our best friend!</p>"
+}
+
+function cat(index) {
+    switch (index) {
+        case 4:
+            
+            break;
+        case 3:
+            
+            break;
+        case 2:
+            
+            break;
+        case 1:
+            
+            break;
+    
+        default:
+            break;
+    }
+}
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('Stalysta.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #E83232;
+    font-family: 'MinhaFonte';
+    font-weight: 600;
+}
+.snap {
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    background-color: #e83232;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1;
+}
+
+#autAnim{
+    width: 48px;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    rotate: 135deg;
+    display: flex;
+    scale: 1.5;
+    transition: .2s linear;
+    animation: autRoll forwards;
+    animation-timeline: view(75% auto);
+}
+#autAnim.hovered{
+    width: 220px;
+    transition: .2s linear;
+}
+#know{
+    color: #e83232;
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    width: 0px;
+    transition: .2s linear;
+}
+#know.hovered{
+    width: 220px;
+    transition: .2s linear;
+    animation: autHover .5s forwards;
+    animation-delay: .2s;
+}
+@keyframes autHover{
+    to {
+        opacity: 1;
+        scale: 1.1;
+    }
+}
+#plus{
+    margin: 0 -2px;
+}
+
+@keyframes autRoll{
+    to {
+        rotate: 0deg;
+        scale: 1;
+    }
+}
+
+.hovered {
+    transition: d 0.5s;
+    d: path("M436 443C206 443 17 303 17 293 17 283 206 143 436 143 666 143 855 283 855 293 855 303 666 443 436 443ZM436 143V17M706 203C706 203 805 202 805 128M166 203C166 203 67 202 67 128");
+}
+
+.blindCont{
+    background-color: #009AC2;
+    border-radius: 60px;
+    height: 50vh;
+}
+
+#send.click{
+    opacity: 0;
+
+}
+.inputs{
+    border: none;
+    width: 20vw;
+    height: 3vh;
+    border-radius: 60px;
+}
+.submit{
+    scale: 1;
+    opacity: 0.5;
+    transition: .05s linear;
+}
+.submit:hover{
+    scale: 1.05;
+    opacity: 0.8;
+    transition: .05s linear;
+}
+
+
+
+.cat{
+    width: fit-content;
+    border-radius: 60px;
+    scale: 1;
+    transition: 0.1s linear;
+}
+.cat:hover{
+    transform: scale(1.05);
+    transition: 0.1s linear;
+}
+#catImg{
+    height: 40vh;
+    cursor: pointer;
+    filter: blur(5px);
+    opacity: 0;
+    scale: 0.9;
+    animation: fade-in forwards;
+    animation-timeline: view(90% auto);
+}
+
+@keyframes fade-in {
+    to {
+        scale: 1;
+        opacity: 1;
+        filter: blur(0px)
+    }
+}
+
+
+.footerLeft{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    margin-right: 5vw;
+}
+
+
+
+header{
+    position: fixed;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    background-color: #E8323200;
+    transition: background-color 0.5s
+}
+header.scrolled{
+    background-color: #e83232;
+    transition: background-color 0.5s
+}
+section{
+    display: inherit;
+    align-items: inherit;
+}
+a{
+    font-size: x-large;
+    margin: 0;
+    color: white;
+}
+a.serv{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    color: white;
+    opacity: .5;
+    transition: .2 linear;
+    text-decoration: none;
+}
+a.serv:hover{
+    opacity: 1;
+    font-weight: 600;
+    transition: .2 linear;
+}
+p{
+    font-size: x-large;
+    margin: 0;
+    cursor: default;
+}
