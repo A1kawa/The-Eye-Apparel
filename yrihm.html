@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Eye Apparel</title>
+    <title>The Eye Apparel - Signature</title>
     <link rel="stylesheet" href="style.css" />
     
 </head>
 <body>
-    <header class="sec-p1" id="meuHeader" style="--header-height: 0px;">
+    <div class="freeShipping">
+        <p style="font-size: 26px;letter-spacing: 0px;">FREE SHIPPING ON ORDERS $100+</p>
+    </div>
+    <header class="sec-p1" id="meuHeader" style="--header-height: 34px;">
         <section class="headSec">
             <a id="headHid" href="contact.html">contact us</a>
         </section>
-        <svg onclick="window.location.href='#'"
+        <svg onclick="window.location.href='LandingPage.html'"
             style="margin: 1vh 0;"
             width="60" 
             height="39" 
@@ -25,7 +28,7 @@
         </svg>
         <section class="headSec">
             <p style="margin-top: 4px;">
-                <a id="headHid" class="activeMenu" href="LandingPage.html">home</a>
+                <a id="headHid" href="LandingPage.html">home</a>
                 <a id="headHid" href="#">about</a>
                 <a id="headHid" onclick="shopClick()">shop</a>
                 <ul id="shopCat">
@@ -42,111 +45,99 @@
         </section>
     </header>
 
-    <!--HERO-->
-    <div class="homeHero sec-p1">
-        <img id="logo" src="" alt="">
-    </div>
 
-
-    <!--CATEGORIES N BEST SELLERS-->
-    <section class="snap sec-p1">
-            <!--BEST SELLERS-->
-            <p2 class="mar-top-bot-L-01" id="catImg">check out our best sellers</p2>
-            <div class="carouselFeat" id="catImg">
-                <li class="rowFeat" onclick="cat('yrihm.html')">
-                    <img class="rowImg backImg" src="products/optics/signature/A-sigFolded.png" alt="">
-                    <img class="rowImg" src="products/optics/signature/A-sigLS.png" alt=""><p>Yrihm's Signature<br><p class="prodPrice">$63.99</p></p>
-                    <buynow id="this">+</buynow>
-                </li>
-                <li class="rowFeat" onclick="cat('retina.html')">
-                    <img class="rowImg backImg" src="products/optics/retina/retinasFolded.png" alt="">
-                    <img class="rowImg" src="products/optics/retina/retinasBack.png" alt=""><p>Retina<br><p class="prodPrice">$43.99</p></p>
-                    <buynow id="this">+</buynow>
-                </li>
-                <li class="rowFeat" onclick="cat('vision.html')">
-                    <img class="rowImg backImg" src="products/choroid/visionLongsleeve02.jpg" alt="">
-                    <img class="rowImg" src="products/choroid/visionLongsleeve04.jpg" alt=""><p>Long Vision<br><p class="prodPrice">$37.50</p></p>
-                    <buynow id="03">+</buynow>
-                </li>
-                <li class="rowFeat" onclick="cat('apothecary.html')">
-                    <img class="rowImg backImg" src="products/ciliary/apotecarysTop02.jpg" alt="">
-                    <img class="rowImg" src="products/ciliary/apotecarysTop03.jpg" alt=""><p>Apothecary's Finesse<br><p class="prodPrice">$89.99</p></p>
-                    <buynow id="this">+</buynow>
-                </li>
-                <li class="rowFeat" onclick="cat('maehji.html')">
-                    <img class="rowImg backImg" src="products/sclera/MaehjisGown03.jpg" alt="">
-                    <img class="rowImg" src="products/sclera/MaehjisGown01.jpg" alt=""><p>Maehji's Gown<br><p class="prodPrice">$55.29</p></p>
-                    <buynow id="this">+</buynow>
-                </li>
-            </div>
-            <div class="yrihmRoll mar-top-bot-L-01">
-                <p2 class="feat">The only Yrihm approved apparel brand.</p2>
-            </div>
-            <!--CATEGORIES-->
-            <p2 class="mar-top-bot-L-01" id="catImg">or shop by our categories</p2>
-            <div class="flex-btw" style="margin-bottom: 17vh;">
-                <div><img onclick="cat('cho.html')" class="cat" id="catImg" src="imgs/catDisCho.png" alt=""><p style="margin: 5vh 0vw;">choroid</p></div>
-                <div><img onclick="cat('scl.html')" class="cat" id="catImg" src="imgs/catDisScl.png" alt=""><p style="margin: 5vh 0vw;">sclera</p></div>
-                <div><img onclick="cat('opt.html')" class="cat" id="catImg" src="imgs/catDisOpt.png" alt=""><p style="margin: 5vh 0vw;">optics</p></div>
-                <div><img onclick="cat('cil.html')" class="cat" id="catImg" src="imgs/catDisCil.png" alt=""><p style="margin: 5vh 0vw;">ciliary</p></div>
-            </div>
-    </section>
-
-    <!--AUTENTICITY-->
-    <div class="snap sec-p1">
-        <div style="display: flex;justify-content: center;align-items: center;">
-            <img class="autBg" style="width: -webkit-fill-available;" src="imgs/BannerAut.png" alt="">
-            <div id="autAnim" onmouseenter="learnIn()" onmouseleave="learnOut()">
-                <img id="plus" src="imgs/plus01.png" alt="">
-                <p id="know">learn more</p>
-                <img id="plus" src="imgs/plus02.png" alt="">
-            </div>
-        </div>
-    </div>
-    <!--BLIND-BUY-->
-    <div class="snap" style="padding: 0px 16%;">
-        <div class="blindCont" style="height: fit-content;display: flex;justify-content: center;flex-direction: column;align-items: center;">
-            <div style="display: flex;height: fit-content;width: fit-content;margin: 5vh 0px 0px 0px;justify-content: center;align-items: center;">
-                <div style="position: absolute;z-index: 1;">
-                    <p style="font-size: 12vh; letter-spacing: -2px;">Blind-buy</p>
+    <main class="sec-p1">
+        <section class="blindCont prodPage">
+            <div class="prodPageHal">
+                <div class="imgPageCont">
+                    <div class="galeryImgs">
+                        <img class="itemPageImg" src="products/optics/signature/A-sigLS.png" alt="">
+                        <img class="itemPageImg" src="products/optics/signature/A-sigFront.png" alt="">
+                        <img class="itemPageImg" src="products/optics/signature/A-sigFront01.png" alt="">
+                        <img class="itemPageImg" src="products/optics/signature/A-sigFolded.png" alt="">
+                        <img class="itemPageImg" src="products/optics/signature/G-sigLS.png" alt="">
+                        <img class="itemPageImg" src="products/optics/signature/G-sigFront.png" alt="">
+                        <img class="itemPageImg" src="products/optics/signature/G-sigFront01.png" alt="">
+                        <img class="itemPageImg" src="products/optics/signature/G-sigFolded.png" alt="">
+                    </div>
                 </div>
-                <svg style="position: relative; z-index: 10" width="872" height="585" viewBox="0 0 872 585" fill="#00000000" xmlns="http://www.w3.org/2000/svg">
-                    <path id="svg-1"
-                    d="M436 443C206 443 17 303 17 293 17 283 206 442 436 442 666 442 855 283 855 293 855 303 666 443 436 443ZM436 442V568M706 377C706 377 805 375 805 451M166 377C166 377 67 375 67 451" 
-                    stroke="#E83232" stroke-width="33" stroke-linecap="round"/>
+                <div class="galeryNavBar">
+                    <img class="NavImg" onclick="setImg(1)" src="products/optics/signature/A-sigLS.png" alt="">
+                    <img class="NavImg" onclick="setImg(2)" src="products/optics/signature/A-sigFront.png" alt="">
+                    <img class="NavImg" onclick="setImg(3)" src="products/optics/signature/A-sigFront01.png" alt="">
+                    <img class="NavImg" onclick="setImg(4)" src="products/optics/signature/A-sigFolded.png" alt="">
+                    <img class="NavImg" onclick="setImg(5)" src="products/optics/signature/G-sigLS.png" alt="">
+                    <img class="NavImg" onclick="setImg(6)" src="products/optics/signature/G-sigFront.png" alt="">
+                    <img class="NavImg" onclick="setImg(7)" src="products/optics/signature/G-sigFront01.png" alt="">
+                    <img class="NavImg" onclick="setImg(8)" src="products/optics/signature/G-sigFolded.png" alt="">
+                </div>
+                <div class="description-pad-sections desc">
+                    <p2 style="font-size: 35px;">DESCRIPTION</p2>
+                    <p2>+</p2>
+                </div>
+                <div class="description-pad-sections desc"></div>
+                <div class="description-pad-sections desc">
+                    <p2 style="font-size: 35px;">SIZING</p2>
+                    <p2>+</p2>
+                </div>
+                <div class="description-pad-sections desc"></div>
+                <div class="description-pad-sections desc">
+                    <p2 style="font-size: 35px;">CARE INSTRUCTIONS</p2>
+                    <p2>+</p2>
+                </div>
+                <div class="description-pad-sections desc"></div>
+                <div class="description-pad-sections desc">
+                    <p2 style="font-size: 35px;">SHIPPING & RETURNS</p2>
+                    <p2>+</p2>
+                </div>
+            </div>
+            <svg style="padding: 2.5% 0;" width="2" height="825" viewBox="0 0 2 825" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 0V824.5" stroke="#D9D9D9" stroke-width="2"/>
                 </svg>
+            <div class="prodPageHal">
+                <div class="description-pad-sections">
+                    <p2 id="name">Yrihm's Signature unisex hoodie</p2>
+                    <br>
+                    <br>
+                    <p2>$63.99</p2>
+                </div>
+                <div class="description-pad-sections">
+                    <p>Color</p>
+                    <br>
+                    <button class="col" onclick="setImg(1), setDesc(4)">ASH</button>
+                    <button class="col" onclick="setImg(5), setDesc(5)">GRAPHITE</button>
+                </div>
+                <div class="description-pad-sections">
+                    <p>Size</p>
+                    <br>
+                    <button class="but" onclick="setDesc(0)">S</button>
+                    <button class="but" onclick="setDesc(1)">M</button>
+                    <button class="but" onclick="setDesc(2)">L</button>
+                    <button class="but" onclick="setDesc(3)">XL</button>
+                </div>
+                <div class="description-pad-sections">
+                    <p>Quantity</p>
+                    <br>
+                </div>
+                <div class="description-pad-sections" style="display: flex; align-items: center; margin-top: 0;">
+                    <button class="but" onclick="setQnt(0)"><</button>
+                    <p id="qnt">1</p>
+                    <button class="but" onclick="setQnt(1)">></button>
+                </div>
+                <div class="description-pad-sections">
+                    <svg width="100%" height="4" viewBox="0 0 777 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 2H775.5" stroke="#D9D9D9" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                </div>
+                <div class="description-pad-sections addCart">
+                    <button class="addCart" onclick="add()">ADD TO CART</button>
+                </div>
             </div>
-            <p style="letter-spacing: -2px; font-size: 32px; margin: 2vh 0px;">do you trust blindly in Yrihm?</p>
-        </div>
-    </div>
-    <!--EYELID-->
-    <div class="snap" style="padding: 0px 6%; justify-content: center;">
-        <p style="font-size: 12vh;">how to become a</p>
-        <p style="font-size: 23vh; letter-spacing: 10px;">EYELID</p>
-        <div class="blindCont" style="height: 32vh;display: flex;justify-content: center;flex-direction: column;align-items: center;">
-        <div id="send" style="width: -webkit-fill-available; height: fit-content;display: flex;justify-content: center;flex-direction: column;align-items: center;">
-            <div style="width: -webkit-fill-available;display: flex;justify-content: space-around;margin: 40px; ">
-                <div class="eyelidInput" style="text-align: left; margin: 10px;">
-                <p style="font-weight: 500; margin-bottom: -1px;">your true name:</p>
-                <input class="inputs" type="text">
-                </div>
-                <img style="height: 100%; width: 2px; border-radius: 60px;" src="imgs/line.png" alt="">
-                <div class="eyelidInput" style="text-align: left; margin: 10px;">
-                <p style="font-weight: 500; margin-bottom: -1px;">your email adress:</p>
-                <input class="inputs" type="text">
-                </div>
-                <img style="height: 100%; width: 2px; border-radius: 60px;" src="imgs/line.png" alt="">
-                <div class="eyelidInput" style="text-align: left; margin: 10px;">
-                <p style="font-weight: 500; margin-bottom: -1px;">R.R.N:</p>
-                <input class="inputs" type="text">
-                </div>
-            </div>
-            <img onclick="submit()" class="submit" src="imgs/Prottection.png" style="height: 120px; margin-bottom: 35px;" alt="">
-        </div>
-        </div>
-    </div>
-    
+                
+        </section>
 
+    </main>
+    
     <footer class="sec-p1" style="justify-content: center;height: fit-content;margin: 50px 0px 10px 0px;">
         <section style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5vh;">
             <svg width="750" height="4" viewBox="0 0 777 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -195,7 +186,8 @@
         </div>
         <p style="text-align: start; letter-spacing: 0px; opacity: 0.8;font-size: 20px;">© 2025 - The Eye Apparel</p>
     </footer>
-    <script src="anime.min.js"></script> 
+    <script src="anime.min.js"></script>
     <script src="LP.js"></script>
+    <script src="prod.js"></script>
 </body>
 </html>

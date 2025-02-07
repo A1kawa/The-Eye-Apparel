@@ -40,6 +40,7 @@ strong{
     --catBuy-right: 7.5%;
     --catBuy-bottom: 17%;
     --backImg-width: 26.07rem;
+    --img-row: 0
 }
 a{
     cursor: pointer;
@@ -92,7 +93,8 @@ buynow{
     background-color: #009AC2;
     text-align: center;
     padding: 5px 0px;
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 100;
 }
@@ -179,7 +181,105 @@ p{
 
 
 
-
+/*PRODUCTS PAGE*/
+.prodPage{
+    display: flex;
+}
+.prodPageHal{
+    width: 50%;
+    display: flex;
+    padding: 2.5% 0;
+    flex-direction: column;
+    align-items: center;
+}
+.prodDesc{
+    width: 50%;
+    margin: 2.5% 0%;
+}
+.imgPageCont{
+    width: 80%;
+    border-radius: 60px;
+    overflow: hidden;
+}
+.galeryImgs{
+    display: flex;
+    transition: .5s;
+    transform: translateX(calc(var(--img-row)*-1%));
+}
+.itemPageImg{
+    width: 100%;
+}
+.galeryNavBar{
+    height: 50px;
+    margin-top: 20px;
+}
+.galeryNavBar .NavImg{
+    height: 100%;
+    opacity: .5;
+    border: #00000000 1px solid;
+    transition: .2s linear;
+}
+.galeryNavBar .NavImg:hover{
+    opacity: 1;
+    border: #000 1px;
+    border-style: solid;
+}
+.description-pad-sections{
+    width: 70%;
+    margin-top: 5%;
+    text-align: start;
+}
+.description-pad-sections p{
+    color: #D9D9D9;
+}
+.description-pad-sections button{
+    cursor: pointer;
+    padding: 10px 25px;
+    font-family: 'MinhaFonte';
+    font-size: x-large;
+    font-weight: 600;
+    color: #D9D9D9;
+    border: #D9D9D9 1px solid;
+    background-color: #00000000;
+    transition: .1s linear;
+}
+.description-pad-sections button:hover{
+    background-color: #D9D9D9;
+    color: #009AC2;
+}
+#qnt{
+    display: flex;
+    width: 80px;
+    height: 100%;
+    background-color: #D9D9D9;
+    color: #009AC2;
+    justify-content: center;
+    align-items: center;
+}
+.description-pad-sections button.addCart{
+    cursor: pointer;
+    padding: 10px 0px;
+    width: 100%;
+    font-family: 'MinhaFonte';
+    font-size: x-large;
+    font-weight: 600;
+    color: #D9D9D9;
+    border: #D9D9D9 1px solid;
+    background-color: #00000000;
+    transition: .1s linear;
+}
+.description-pad-sections button.addCart:hover{
+    background-color: #D9D9D9;
+    color: #009AC2;
+}
+.desc{
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
+    color: #d9d9d9;
+    border-top: #d9d9d9 2px solid;
+}
 
 
 
@@ -195,9 +295,9 @@ p{
 }
 .const{
     height: 30vh;
-    margin: 1% 6%;
+    margin: 1% 0%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
 }
 .heightObserver{
