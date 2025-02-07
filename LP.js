@@ -9,6 +9,7 @@ let countdown = 0
 
 window.onload = async function () {
     const logos = document.getElementById('logo')
+    await delay(500)
     const timeline = anime.timeline({
         targets: '#logo',
         duration: 500,
@@ -26,34 +27,25 @@ window.onload = async function () {
     logos.src = "imgs/EyeLogo.png"
 }
 
-
-window.addEventListener('scroll', function() {
-    const header = document.getElementById("meuHeader")
-
-    if (window.scrollY > 10) {
-        header.classList.add("scrolled")
-
-        const div = document.getElementById("LandBnr")
-        const scrollMax = 300
-        const maxAltura = 100 // Altura máxima da div
-        const minAltura = 30;
-
-        let scrollTop = Math.min(window.scrollY, scrollMax);
-        let novaAltura = Math.floor(maxAltura - ((scrollTop / scrollMax) * (maxAltura-minAltura)))
-
-        div.style.height = novaAltura + "vh"
+async function shopClick() {
+    const shopRow = document.getElementById('shopCat')
+    if (toggle == false) {
+        toggle = true
+        shopRow.style.width = '380px'
+    } else {
+        toggle = false
+        shopRow.style.width = '0px'
     }
-    else {
-        header.classList.remove("scrolled")
-        const div = document.getElementById("LandBnr")
-        div.style.height = "100vh"
-    }
-})
+}
 
-document.getElementById("svg-1").addEventListener("mouseenter", function (){
+
+
+document.getElementById("svg-1").addEventListener("mouseenter", async function (){
     const svg = document.getElementById("svg-1")
     svg.classList.add("hovered")
 })
+
+
 document.getElementById("svg-1").addEventListener("click", function (){
     countdown++
     console.log(countdown)
@@ -98,24 +90,10 @@ async function submit() {
     logos.innerHTML = "<p style='font-size:50px;'>You're gonna be our best friend!</p>"
 }
 
-function cat(index) {
-    switch (index) {
-        case 4:
-            
-            break;
-        case 3:
-            
-            break;
-        case 2:
-            
-            break;
-        case 1:
-            
-            break;
-    
-        default:
-            break;
-    }
+function cat(page) {
+    setInterval(function(){
+        window.location.href = page;
+    }, 500)
 }
 
 function delay(ms) {
