@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Eye Apparel - Signature</title>
+    <title>The Eye Apparel - Apothecary</title>
     <link rel="stylesheet" href="style.css" />
     
 </head>
@@ -29,14 +29,14 @@
         <section class="headSec">
             <p style="margin-top: 4px;">
                 <a id="headHid" href="LandingPage.html">home</a>
-                <a id="headHid" href="about.html">about</a>
-                <a id="headHid" class="activeMenu" onclick="shopClick()">shop</a>
+                <a id="headHid" href="#">about</a>
+                <a id="headHid" onclick="shopClick()">shop</a>
                 <ul id="shopCat">
                     <h1>|</h1>
                     <a href="cho.html" id="headHid">choroid</a>
                     <a href="scl.html" id="headHid">sclera</a>
                     <a href="opt.html" id="headHid">optics</a>
-                    <a href="cil.html" class="activeMenu" id="headHid">ciliary</a>
+                    <a href="cil.html" id="headHid">ciliary</a>
                     <h1>|</h1>
                 </ul>
                 <a id="headHid" href="#">my cart</a>
@@ -51,21 +51,15 @@
             <div class="prodPageHal">
                 <div class="imgPageCont">
                     <div class="galeryImgs">
-                        <img class="itemPageImg" src="products/optics/strengh/strenghFront01.png" alt="">
-                        <img class="itemPageImg" src="products/optics/strengh/strenghBack01.png" alt="">
-                        <img class="itemPageImg" src="products/optics/strengh/strenghBack02.png" alt="">
-                        <img class="itemPageImg" src="products/optics/strengh/strenghFront02.png" alt="">
-                        <img class="itemPageImg" src="products/optics/strengh/strenghBack03.png" alt="">
-                        <img class="itemPageImg" src="products/optics/strengh/strenghFolded.png" alt="">
+                        <img class="itemPageImg" src="products/ciliary/apotecarysTop01.jpg" alt="">
+                        <img class="itemPageImg" src="products/ciliary/apotecarysTop02.jpg" alt="">
+                        <img class="itemPageImg" src="products/ciliary/apotecarysTop03.jpg" alt="">
                     </div>
                 </div>
                 <div class="galeryNavBar">
-                    <img class="NavImg" onclick="setImg(1)" src="products/optics/strengh/strenghFront01.png" alt="">
-                    <img class="NavImg" onclick="setImg(2)" src="products/optics/strengh/strenghBack01.png" alt="">
-                    <img class="NavImg" onclick="setImg(3)" src="products/optics/strengh/strenghBack02.png" alt="">
-                    <img class="NavImg" onclick="setImg(4)" src="products/optics/strengh/strenghFront02.png" alt="">
-                    <img class="NavImg" onclick="setImg(5)" src="products/optics/strengh/strenghBack03.png" alt="">
-                    <img class="NavImg" onclick="setImg(6)" src="products/optics/strengh/strenghFolded.png" alt="">
+                    <img class="NavImg" onclick="setImg(1)" src="products/ciliary/apotecarysTop01.jpg" alt="">
+                    <img class="NavImg" onclick="setImg(2)" src="products/ciliary/apotecarysTop02.jpg" alt="">
+                    <img class="NavImg" onclick="setImg(3)" src="products/ciliary/apotecarysTop03.jpg" alt="">
                 </div>
                 <div class="description-pad-sections desc" onclick="openDesc(0)">
                     <p2 style="font-size: 35px;">DESCRIPTION</p2>
@@ -147,15 +141,15 @@
                 </svg>
             <div class="prodPageHal">
                 <div class="description-pad-sections">
-                    <p2 id="name">Strengh Tee</p2>
+                    <p2 id="name">Apothecary's Finesse Set</p2>
                     <br>
                     <br>
-                    <p2>$33.99</p2>
+                    <p2>$89.99</p2>
                 </div>
                 <div class="description-pad-sections">
                     <p>Color</p>
                     <br>
-                    <button class="col" onclick="setImg(3), setDesc(4)">WHITE</button>
+                    <button class="col" onclick="setImg(3), setDesc(4)">WHITE AND BROWN</button>
                 </div>
                 <div class="description-pad-sections">
                     <p>Size</p>
@@ -209,19 +203,19 @@
     <div class="blindCont prodGrid" id="related">
         <p2 style="grid-column: 2/3;">related products</p2>
         <div></div>
-        <li class="prod" onclick="product('yrihm.html')">
+        <li  class="prod" onclick="product('yrihm.html')">
             <img style="width: 23.3rem;" class="prodImg backImg" src="products/optics/signature/A-sigFolded.png" alt="">
             <img class="prodImg" src="products/optics/signature/A-sigLS.png" alt="">
             <buynow class="catBuy">+</buynow>
             <p class="prodName">Yrihm's Signature</p>
             <p class="prodPrice">$63.99</p>
         </li>
-        <li class="prod" onclick="product('retina.html')">
-            <img style="width: 23.3rem;" class="prodImg backImg" src="products/optics/retina/retinasBack02.png" alt="">
-            <img class="prodImg" src="products/optics/retina/retinasBack.png" alt="">
+        <li class="prod" onclick="product('strengh.html')">
+            <img style="width: 23.3rem;" class="prodImg backImg" src="products/optics/strengh/strenghBack03.png" alt="">
+            <img class="prodImg" src="products/optics/strengh/strenghBack01.png" alt="">
             <buynow class="catBuy">+</buynow>
-            <p class="prodName">Retina Longsleeve</p>
-            <p class="prodPrice">$43.99</p>
+            <p class="prodName">Strengh Tee</p>
+            <p class="prodPrice">$33.99</p>
         </li>
         <li class="prod" onclick="product('answer.html')">
             <img style="width: 23.3rem;" class="prodImg backImg" src="products/optics/the answer/Y-answerBack01.png" alt="">
