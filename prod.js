@@ -1,7 +1,12 @@
 let imgs = (document.getElementsByClassName('NavImg').length) -1
+let toggleDesc = false
 let quantity = 1
 let color = 0
 let size = 0
+let tDesc = false
+let tSiz = false
+let tCare = false
+let tShip = false
 sessionStorage.setItem("prods", 0)
 
 window.onload = function(){
@@ -63,4 +68,55 @@ function add() {
         console.log(sessionStorage.getItem("prods"))
         console.log(JSON.parse(sessionStorage.getItem("product01")))
     }
+}
+
+function openDesc(ind) {
+    switch (ind) {
+        case 3:
+            if (tShip == false) {
+                document.getElementsByClassName('descP')[ind].style.height = '110px'
+                tShip = true
+            } else {
+                document.getElementsByClassName('descP')[ind].style.height = '0px'
+                tShip = false
+            }
+            break;
+        case 2:
+            if (tCare == false) {
+                document.getElementsByClassName('descP')[ind].style.height = '215px'
+                tCare = true
+            } else {
+                document.getElementsByClassName('descP')[ind].style.height = '0px'
+                tCare = false
+            }
+            break;
+        case 1:
+            if (tSiz == false) {
+                document.getElementsByClassName('descP')[ind].style.height = '150px'
+                tSiz = true
+            } else {
+                document.getElementsByClassName('descP')[ind].style.height = '0px'
+                tSiz = false
+            }
+            break;
+        case 0:
+            if (tDesc == false) {
+                document.getElementsByClassName('descP')[ind].style.height = '430px'
+                tDesc = true
+            } else {
+                document.getElementsByClassName('descP')[ind].style.height = '0px'
+                tDesc = false
+            }
+            break;
+    
+        default:
+            break;
+    }
+    
+    //document.getElementsByClassName('descP')[ind].style.marginBottom = '5%'
+}
+function product(prod) {
+    setInterval(function(){
+        window.location.href = prod;
+    }, 500)
 }
