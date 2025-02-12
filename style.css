@@ -215,6 +215,7 @@ p{
 }
 .itemPageImg{
     width: 100%;
+    object-fit: cover;
 }
 .galeryNavBar{
     width: 65%;
@@ -416,6 +417,7 @@ p.prodPrice{
     width: 100%;
 }
 .prodImg{
+    object-fit: cover;
     border-radius: 60px;
     transition: .2s;
     width: 100%;
