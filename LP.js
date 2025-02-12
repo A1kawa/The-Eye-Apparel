@@ -54,6 +54,7 @@ document.getElementById("svg-1").addEventListener("click", function (){
     }
 })
 
+
 function learnIn(){
     const aut = document.getElementById("know")
     aut.classList.add("hovered") 
@@ -98,4 +99,22 @@ function cat(page) {
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function closeCart() {
+    const BGCart = document.getElementsByClassName('cartBG')[0]
+    const contCart = document.getElementsByClassName('cartCont')[0]
+
+    BGCart.style.width = '100vw'
+    BGCart.style.opacity = 0
+    await delay(200)
+    contCart.style.zIndex = '-20'
+}
+function openCart() {
+    const BGCart = document.getElementsByClassName('cartBG')[0]
+    const contCart = document.getElementsByClassName('cartCont')[0]
+
+    contCart.style.zIndex = '1000'
+    BGCart.style.width = '74.5vw'
+    BGCart.style.opacity = '.5'
 }

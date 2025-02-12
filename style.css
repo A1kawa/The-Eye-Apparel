@@ -84,8 +84,89 @@ buynow{
     transition: 5s forwards;
 }
 
-
+/*--CART--*/
+.headCart{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.close{
+    height: fit-content;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-weight: 100;
+    opacity: .5;
+    transition: .1s linear;
+}
+.close:hover{
+    opacity: 1;
+}
+.headCart p2{
+    margin: 0;
+}
+.cartCont{
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    overflow: hidden;
+    z-index: -20;
+    top: 0;
+    left: 0;
+}
+.cartBG{
+    height: 100%;
+    width: 100vw;
+    background-color: #000;
+    opacity: 0;
+    transition: .2s linear;
+}
+.cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #e83232;
+    height: 100%;
+    width: 25vw;
+}
+.cart .topper{
+    margin: 0% 3%;
+    padding-top: 5%;
+    border-bottom: #d9d9d9 2px solid;
+}
+.topper2{
+    margin-top: 4.5%;
+    border-top: #d9d9d9 2px solid;
+}
+.topper2 h1{
+    cursor: default;
+    color: #d9d9d9;
+    font-size: 20px;
+}
+.footerCart{
+    margin: 0% 3%;
+}
+.check{
+    width: 100%;
+    height: 3rem;
+    font-family: 'MinhaFonte-Bold';
+    border-radius: 20px;
+    font-size: x-large;
+    padding-top: 1%;
+    color: #d9d9d9;
+    background-color: #e83232;
+    border: #d9d9d9 2px solid;
+    margin-bottom: 5%;
+    transition: .1s linear;
+}
+.check:hover{
+    color: #e83232;
+    background-color:  #d9d9d9;
+}
 /*--ABOUT US PAGE--*/
+
+/*--CONTACT US PAGE--*/
 
 /*-FOOTER N HEADER PART OF EVERY PAGES-*/
 
@@ -447,6 +528,7 @@ p.prodPrice{
     justify-content: center;
 }
 #logo{
+    width: 50%;
     position: relative;
     transform: scale(1);
 }
@@ -509,7 +591,7 @@ p2.feat{
     animation: rolar 10s linear infinite;
 }
 .cat{
-    width: fit-content;
+    width: 16vw;
     border-radius: 60px;
     scale: 1;
     transition: 0.1s linear;
@@ -562,6 +644,9 @@ p2.feat{
     transition: .2s linear;
     animation: autRoll forwards;
     animation-timeline: view(75% auto);
+}
+#autAnim p{
+    cursor: pointer;
 }
 #autAnim.hovered{
     width: 220px;
