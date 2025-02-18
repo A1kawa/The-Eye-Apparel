@@ -118,3 +118,7 @@ function openCart() {
     BGCart.style.width = '74.5vw'
     BGCart.style.opacity = '.5'
 }
+
+function YrihmCar(much) {
+    document.documentElement.style.setProperty("--img-row", ((much) * 100))
+}

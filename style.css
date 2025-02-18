@@ -165,8 +165,120 @@ buynow{
     background-color:  #d9d9d9;
 }
 /*--ABOUT US PAGE--*/
+.church{
+    display: flex;
+    margin-top: 10vh;
+    align-items: center;
+}
+.church p2{
+    font-size: 4.7rem;
+}
+.churchDesc{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+}
+.church img{
+    width: 50vw;
+    mask-image: linear-gradient(
+        to right,
+        transparent 1%,
+        black 2%
+    );
+}
+.YrihmRow {
+    display: flex;
+    height: 30vw;
+    width: 46.7vw;
+    align-items: center;
+    transition: .5s;
+    transform: translateX(calc(var(--img-row)*-1%));
+}
+.controller{
+    position: absolute;
+    width: 45.2vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    left: 10px;
+}
+.YrihmCont{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.controller p{
+    cursor: pointer;
+}
+.YrihmRow img{
+    object-fit: contain;
+    width: fit-content;
+    height: 100%;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 2% 98%,
+        transparent
+    );
+}
 
 /*--CONTACT US PAGE--*/
+#contact{
+    color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+}
+#contact p2{
+    font-size: 4.7rem;
+}
+#contact h3{
+    margin: 0;
+    width: fit-content;
+    padding: .8% .5% .5% .5%;
+    border: #d9d9d988 2px solid;
+    border-left: none;
+    border-right: none;
+}
+#contact a:hover{
+    text-decoration: underline;
+}
+.emailCont{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+.emailCont input{
+    height: 2rem;
+    padding-left: 1%;
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: #d9d9d9 2px solid;
+}
+.emailCont textarea{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 2rem;
+    padding-left: 1%;
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+    border: #d9d9d9 2px solid;
+    height: 8rem;
+}
+.emailCont button{
+    background-color: #009AC2;
+}
+.emailCont button:hover{
+    color: #009AC2;
+}
+
 
 /*-FOOTER N HEADER PART OF EVERY PAGES-*/
 
@@ -712,8 +824,3 @@ p2.feat{
     opacity: 0.8;
     transition: .05s linear;
 }
-
-
-
-
-
